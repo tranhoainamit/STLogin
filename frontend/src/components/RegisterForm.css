@@ -1,0 +1,117 @@
+/* Toàn bộ container register */
+.register-container {
+    display: flex;
+    height: 100vh;
+    align-items: center; /* Căn giữa form theo chiều dọc */
+    justify-content: center;
+    background-color: #f4f6f8;
+    padding: 10px; /* Giảm padding tổng thể */
+    gap: 10px; /* Giảm khoảng cách giữa form và ảnh */
+    box-sizing: border-box;
+  }
+  
+  /* Phần form đăng ký */
+  .register-form {
+    width: 50%; /* Đặt width bằng với ảnh nền để cân đối */
+    max-width: 400px; /* Giảm max-width để tránh tràn */
+    padding: 30px; /* Giảm padding bên trong form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Giảm shadow để form nhẹ nhàng hơn */
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  
+  /* Logo trong form */
+  .logo img {
+    width: 60px; /* Giảm kích thước logo */
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Phần hình ảnh bên trái */
+  .register-image {
+    display: none;
+  }
+  
+  /* Responsive: hiển thị hình ảnh trên màn hình lớn */
+  @media (min-width: 768px) {
+    .register-container {
+      justify-content: space-around;
+      padding: 20px; /* Giảm padding tổng thể */
+      height: 100%;
+    }
+  
+    .register-form {
+      width: 45%; /* Giảm width xuống để form nhỏ hơn và cân đối */
+      padding: 40px; /* Giảm padding bên trong form */
+    }
+  
+    .register-image {
+      display: block;
+      width: 45%;
+      max-height: 550px; /* Giảm max-height để cân đối hơn */
+      overflow: hidden;
+      border-radius: 12px; /* Thêm border-radius cho ảnh nền */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Giảm shadow cho ảnh nền */
+    }
+  
+    .register-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Đảm bảo ảnh không bị méo và hiển thị đầy đủ */
+      border-radius: 12px; /* Thêm border-radius để đồng nhất với shadow */
+    }
+  }
+  
+  /* Responsive tốt hơn trên màn hình nhỏ */
+  @media (max-width: 768px) {
+    .register-container {
+      flex-direction: column;
+      padding: 10px; /* Giảm padding tổng thể */
+      height: 100vh; /* Đảm bảo chiều cao vừa đủ */
+    }
+  
+    .register-form {
+      width: 100%; /* Form chiếm toàn bộ chiều rộng */
+      max-width: 100%; /* Không giới hạn max-width */
+      padding: 20px; /* Giảm padding bên trong form */
+    }
+  
+    .register-image {
+      display: block;
+      width: 100%;
+      height: 180px; /* Giảm chiều cao của ảnh nền */
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 15px; /* Giảm khoảng cách với form */
+    }
+  
+    .register-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  /* Link "Log in" tinh tế hơn */
+  .login-link {
+    text-align: center;
+    margin-top: 10px; /* Giảm khoảng cách trên */
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  

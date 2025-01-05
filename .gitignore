@@ -1,0 +1,15 @@
+# Loại trừ thư mục node_modules ở cả backend và frontend
+backend/node_modules/
+frontend/node_modules/
+
+# Loại trừ package-lock.json ở cả backend và frontend
+backend/package-lock.json
+frontend/package-lock.json
+
+# Loại trừ file lock của Yarn nếu dùng
+backend/yarn.lock
+frontend/yarn.lock
+
+# Loại trừ các file build nếu có
+backend/dist/
+frontend/build/

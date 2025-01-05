@@ -1,0 +1,92 @@
+/* Toàn bộ container login */
+.login-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f6f8;
+    padding: 20px;
+    gap: 20px; /* Khoảng cách giữa form và ảnh */
+    box-sizing: border-box;
+  }
+  
+  /* Phần form đăng nhập */
+  .login-form {
+    width: 50%; /* Đặt width bằng với ảnh nền để cân đối */
+    max-width: 450px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Shadow nổi bật */
+    border-radius: 12px;
+  }
+  
+  /* Logo trong form */
+  .logo img {
+    width: 70px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Phần hình ảnh bên phải */
+  .login-image {
+    display: none;
+  }
+  
+  /* Responsive: hiển thị hình ảnh trên màn hình lớn */
+  @media (min-width: 768px) {
+    .login-container {
+      justify-content: space-around;
+      padding: 40px;
+    }
+  
+    .login-form {
+      width: 50%; /* Đặt width bằng với ảnh nền */
+      padding: 60px;
+    }
+  
+    .login-image {
+      display: block;
+      width: 50%; /* Đặt width bằng với form */
+      height: 100%;
+      overflow: hidden;
+      border-radius: 12px; /* Thêm border-radius cho ảnh nền */
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Shadow cho ảnh nền */
+    }
+  
+    .login-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Đảm bảo ảnh không bị méo và hiển thị đầy đủ */
+      border-radius: 12px; /* Thêm border-radius để đồng nhất với shadow */
+    }
+  }
+  
+  /* Link "Register here" tinh tế hơn */
+  .register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Link "Forgot password" */
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  

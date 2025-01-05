@@ -1,0 +1,28 @@
+.logo {
+    height: 32px;
+    margin: 16px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .site-layout .site-layout-background {
+    background: #001529;
+    color: white;
+  }
+  
+  .ant-menu-item:hover {
+    background-color: #1890ff !important;
+    color: white !important;
+  }
+  
+  .ant-menu-item-selected {
+    background-color: #1890ff !important;
+    color: white !important;
+  }
+  
+  .ant-menu-item-selected:hover {
+    background-color: #40a9ff !important;
+  }
+  

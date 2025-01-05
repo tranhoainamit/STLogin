@@ -1,0 +1,70 @@
+{
+  "name": "stlogin-app",
+  "version": "1.0.0",
+  "homepage": "./",
+  "description": "Ứng dụng STLogin",
+  "author": "Trần Hoài Nam",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run start-react\" \"npm run start-electron\"",
+    "start-react": "react-scripts start",
+    "start-electron": "wait-on http://localhost:3000 && electron .",
+    "build-react": "react-scripts build",
+    "build": "npm run build-react && electron-builder",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.stlogin.app",
+    "productName": "STLogin",
+    "files": [
+      "build/**/*",
+      "main/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "extraMetadata": {
+      "main": "main/main.js"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "dependencies": {
+    "antd": "^5.22.7",
+    "axios": "^1.7.9",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.14.1",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^6.1.14"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^9.1.2",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "wait-on": "^8.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
